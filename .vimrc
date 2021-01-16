@@ -56,6 +56,17 @@ let mapleader=","
 " toggle gundo
 nnoremap <leader>u :UndotreeToggle<CR>
 
+" CtrlP settings
+let g:ctrlp_match_window = 'bottom,order:ttb' " match files top to bottom
+let g:ctrlp_switch_buffer = 0 " open files in new buffers
+let g:ctrlp_working_path_mode = 0 " change working directory during Vim session
+
+" Reload vimrc
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
+" Edit virmc
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+
 " activate pathogen
 call pathogen#infect()
 call pathogen#helptags()
