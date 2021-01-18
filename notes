@@ -1,0 +1,64 @@
+Vim notes
+----------
+
+* Change until x: ctx
+    - ex. cfL on "Her nomer is OLGA" -> "GA"
+                                         ^- cursor location 
+
+* Find occurence of word: *
+* Find next occurence (on the same line) after f/t/F/T: ;
+* Change from cursor to end of line: C or c$
+* Insert at the end of line: A
+* Find next search occurence: n
+* Swap case of chr: ~
+* Pan so that current line hello vertically in the middle: z
+* Repeat last command: .
+* Overwrite (multiple character from cursor onwards): R
+* Show closing paren: %
+* Macros for recording commands
+    - to record a new macro: q + register to record to (i.e. qm)
+    - to stop recording:     q
+    - to replay macro: @ + register (i.e. @m)
+* Tags (requires ctags)
+    - To make tags: :MakeTags
+    - Create the `tags` file (where ^ is control)
+    - Use ^] to jump to tag under cursor
+    - Use g^] for ambiguous tags
+    - Use ^t to jump back up the tag stack
+* Find the cursor / spotlight: CMD + /
+* Autocomplete
+    - To pull up list of autocomplete options:
+        - ^x^n for just this file
+        - ^x^f for filenames
+        - ^x^] for tags only
+        - ^n for anything specified by the 'complete' option
+    - To navigate pull-up menu:
+        - use ^n and ^p
+* Jump to file at path cursor is on: gf
+* Switch the case of each letter in a word: g~e
+* Copy to system clipboard: use + register (i.e. "+y)
+* Surround
+    - one word:     ysiw"    <- will wrap with "
+    - current line: yss"     <- will wrap with "
+* Navigations
+    - forward:  ctrl+f
+    - backward: ctrl+b
+
+Spam
+-----
+
+    whatevs dude
+    whatevs dude
+    {
+        dumb => dumb
+        more => stuff
+    }
+    whatevs dude
+    whatevs dude
+    whatevs what hello going on
+    whatevs dude
+    whatevs dude
+    whatevs dude
+    whatevs dude
+    whatevs dude
+    whatevs dude

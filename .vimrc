@@ -10,6 +10,7 @@ set laststatus=2   " lightline fix
 set autoindent     " enable autoindentation
 set tabstop=4 	   " # of visual spaces per tab
 set softtabstop=4  " # of spaces per tab when editing
+set shiftwidth=4   " # of spaces to use for autoindent
 set expandtab	   " tabs are spaces
 
 set number 	       " show line numbers
@@ -21,6 +22,13 @@ set showmatch      " highlight matching parens
 set incsearch      " search as characters are entered
 set hlsearch       " highlight matches
 set wildmenu       " visual autocomplete for cmd menu
+
+" Create the `tags` file (requires ctags) ; ^ = control
+"   - Use ^] to jump to tag under cursor
+"   - Use g^] for ambiguous tags
+"   - Use ^t to jump back up the tag stack
+" For a visual list of tags, use taglist
+command! MakeTags !ctags -R .
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR> 
@@ -68,6 +76,9 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 " toggle ack/Ag
 nnoremap <leader>a :Ack<Space>
 
+" nohl remap
+nnoremap <leader>/ :nohlsearch<CR>
+
 " CtrlP settings
 let g:ctrlp_match_window = 'bottom,order:ttb' " match files top to bottom
 let g:ctrlp_switch_buffer = 0 " open files in new buffers
@@ -85,3 +96,8 @@ nnoremap <leader>ev :vsp $MYVIMRC<CR>
 " activate pathogen
 call pathogen#infect()
 call pathogen#helptags()
+
+" autocommands
+" set comment string for Python
+autocmd FileType python setlocal commentstring=#\ %s
+
