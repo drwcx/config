@@ -1,10 +1,10 @@
 Vim notes
 ----------
 
-* Change until x: ctx
+* Change until (but not including) x: ctx
     - ex. cfL on "Her nomer is OLGA" -> "GA"
                                          ^- cursor location 
-
+(test here)
 * Find occurence of word: *
 * Find next occurence (on the same line) after f/t/F/T: ;
 * Change from cursor to end of line: C or c$
@@ -43,6 +43,11 @@ Vim notes
 * Navigations
     - forward:  ctrl+f
     - backward: ctrl+b
+
+* For speed:
+    * Move lines in normal mode
+        - :-14,-12co. -> moves the 14th to 12th line above cursor to cursor
+    * High, middle, low -> H, M, L
 
 Spam
 -----

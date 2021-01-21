@@ -2,6 +2,9 @@ colorscheme badwolf
 set background=dark
 syntax enable
 
+" HardTime (delayed h/j/k/l) 
+let g:hardtime_default_on = 1
+
 set autoindent     " copy current indentation when inserting new line
 set path+=**       " search down into subfolders & tab completion for all related tasks
 set wildmenu       " display all matching files when we tab complete
@@ -60,6 +63,11 @@ noremap <Left> <nop>
 noremap <Right> <nop>
 noremap <Up> <nop>
 noremap <Down> <nop>
+
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
 
 " bind jk to esc 
 inoremap jk <esc>
