@@ -3,7 +3,7 @@ set background=dark
 syntax enable
 
 " HardTime (delayed h/j/k/l) 
-let g:hardtime_default_on = 1
+" let g:hardtime_default_on = 1
 
 set autoindent     " copy current indentation when inserting new line
 set path+=**       " search down into subfolders & tab completion for all related tasks
@@ -25,7 +25,7 @@ set showmatch      " highlight matching parens
 set incsearch      " search as characters are entered
 set hlsearch       " highlight matches
 set wildmenu       " visual autocomplete for cmd menu
-
+filetype plugin indent on       " activate extension-specific vim settings
 " Create the `tags` file (requires ctags) ; ^ = control
 "   - Use ^] to jump to tag under cursor
 "   - Use g^] for ambiguous tags
@@ -86,6 +86,9 @@ nnoremap <leader>a :Ack<Space>
 
 " nohl remap
 nnoremap <leader>/ :nohlsearch<CR>
+
+" change to current directory
+nnoremap <leader>cd :cd %:p:h<CR>
 
 " CtrlP settings
 let g:ctrlp_match_window = 'bottom,order:ttb' " match files top to bottom
