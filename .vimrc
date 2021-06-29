@@ -1,10 +1,21 @@
-colorscheme badwolf
+" Enable true color 启用终端24位色
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+let ayucolor="mirage"
+colorscheme ayu
 set background=dark
 syntax enable
 
 " HardTime (delayed h/j/k/l) 
 " let g:hardtime_default_on = 1
 
+set formatoptions-=cro "disables continuation of comments on new lines
+
+set colorcolumn=100 " vertical column at char 100 on each line
 set autoindent     " copy current indentation when inserting new line
 set path+=**       " search down into subfolders & tab completion for all related tasks
 set wildmenu       " display all matching files when we tab complete
