@@ -1,13 +1,4 @@
-" Enable true color 启用终端24位色
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
-let ayucolor="mirage"
-colorscheme ayu
-set background=dark
+colorscheme gruvbox
 syntax enable
 
 " HardTime (delayed h/j/k/l) 
