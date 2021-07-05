@@ -1,4 +1,4 @@
-colorscheme gruvbox
+colorscheme andromeda
 syntax enable
 
 " HardTime (delayed h/j/k/l) 
