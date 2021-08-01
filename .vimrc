@@ -1,4 +1,4 @@
-colorscheme andromeda
+colorscheme PaperColor
 syntax enable
 
 " HardTime (delayed h/j/k/l) 
@@ -7,6 +7,7 @@ syntax enable
 set formatoptions-=cro "disables continuation of comments on new lines
 
 set colorcolumn=100 " vertical column at char 100 on each line
+highlight ColorColumn ctermbg=Black
 set autoindent     " copy current indentation when inserting new line
 set path+=**       " search down into subfolders & tab completion for all related tasks
 set wildmenu       " display all matching files when we tab complete
