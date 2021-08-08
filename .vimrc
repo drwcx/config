@@ -1,6 +1,8 @@
 colorscheme PaperColor
 syntax enable
 
+" Background
+set background=dark
 " HardTime (delayed h/j/k/l) 
 " let g:hardtime_default_on = 1
 
@@ -84,23 +86,19 @@ nnoremap <leader>u :UndotreeToggle<CR>
 "toggle NERDTree
 nnoremap <leader>t :NERDTreeToggle<CR>
 
-" toggle ack/Ag
-nnoremap <leader>a :Ack<Space>
-
 " nohl remap
 nnoremap <leader>/ :nohlsearch<CR>
 
 " change to current directory
 nnoremap <leader>cd :cd %:p:h<CR>
 
-" CtrlP settings
-let g:ctrlp_match_window = 'bottom,order:ttb' " match files top to bottom
-let g:ctrlp_switch_buffer = 0 " open files in new buffers
-let g:ctrlp_working_path_mode = 0 " change working directory during Vim session
+" FZF mappings
+nnoremap <C-p> :Files<Cr>
 
-" Silver searcher as ack substitute
-let g:ackprg = 'ag --vimgrep'
+" Rg mappings
+nnoremap <C-r> :Rg<Cr>
 
+" 
 " Reload vimrc
 nnoremap <leader>sv :source $MYVIMRC<CR>
 

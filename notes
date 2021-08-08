@@ -1,3 +1,22 @@
+Ranger notes
+-----------
+S - to open shell in selected dir
+
+FZF notes
+----------
+
+Vim
+- :BLines  to fuzzy search in current buffer
+- :Lines   to search thru all buffers
+- :Buffers lists buffers
+
+Shell
+- Ctrl-T - list files + folders in current directory 
+    - (e.g., git commit <CTRL+T>, select a few files using <TAB>, finally <Return>)
+- Ctrl-R - to check out history
+- Esc-C  - fuzzy change directory
+
+
 Vim notes
 ----------
 
