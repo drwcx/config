@@ -96,7 +96,10 @@ nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <C-p> :Files<Cr>
 
 " Rg mappings
-nnoremap <C-r> :Rg<Cr>
+nnoremap <leader>a :Rg<Cr>
+"
+" Rg mappings
+nnoremap <C-f> :Ranger<Cr>
 
 " 
 " Reload vimrc
