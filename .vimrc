@@ -80,11 +80,8 @@ inoremap jk <esc>
 " create new key
 let mapleader=","
 
-" toggle gundo
+" toggle undotree
 nnoremap <leader>u :UndotreeToggle<CR>
-
-"toggle NERDTree
-nnoremap <leader>t :NERDTreeToggle<CR>
 
 " nohl remap
 nnoremap <leader>/ :nohlsearch<CR>
@@ -94,6 +91,15 @@ nnoremap <leader>cd :cd %:p:h<CR>
 
 " FZF mappings
 nnoremap <C-p> :Files<Cr>
+
+" FZF.vim now supports this command out of the box
+" so this code is potentially no longer needed.
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+  \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
+  \   <bang>0)
 
 " Rg mappings
 nnoremap <leader>a :Rg<Cr>

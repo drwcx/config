@@ -7,7 +7,5 @@
 - Ranger   (vim plugin + native)
 - Rg       (native)
 - Fzf      (vim plugin + native)
-- Nerdtree (vim plugin)
-- Gundo    (vim plugin)
-- ctags
-- Papercolor (theme)
+- Undotree (vim plugin)
+- ctags    (native)
